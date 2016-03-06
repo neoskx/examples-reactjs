@@ -9,8 +9,10 @@
     <title>Shaoke's ReactJS Example</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
-          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://facebook.github.io/react/css/syntax.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -32,49 +34,106 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello!</h1>
-        <p>I am Shaoke Xu. I am a front-end developer, also use nodejs to develop server side. I am interesting to try new technologies. I made all the examples I did before online also checked in to github. Feel free to use it.</p>
-        <p>This website includes all the examples I did before use <a href="https://facebook.github.io/react/">ReactJS</a> and <a href="https://nodejs.org/en/">NodeJS</a>.</p>
-        <p><a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/shaoke/examples-reactjs" role="button">Github &raquo;</a></p>
+        <p>I am Shaoke Xu. I am a front-end developer, also use nodejs to develop server side. I am interesting to try
+            new technologies. I made all the examples I did before online also checked in to github. Feel free to use
+            it.</p>
+        <p>This website includes all the examples I did before use <a
+                href="https://facebook.github.io/react/">ReactJS</a> and <a href="https://nodejs.org/en/">NodeJS</a>.
+        </p>
+        <p><a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/shaoke/examples-reactjs"
+              role="button">Github &raquo;</a></p>
     </div>
 </div>
 
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-md-12">
+            <h2>Official Tutorial</h2>
+            <p>This is the official Tutorial provided by ReactJS. You can get more information from
+                <a target="_blank" href="https://facebook.github.io/react/docs/tutorial.html">tutorial</a>
+            </p>
+            <p>After this tutorial you should know following knowledge</p>
+            <dd>
+                <dt>
+                    <h4>Custom React Class/Component names must begin with <strong>an uppercase letter</strong>.</h4>
+                </dt>
+                <dd></dd>
+                <dt>
+                    <h4>Create React Component</h4>
+                </dt>
+                <dd>
+                    <pre data-lang="jsx">
+// CommentBox is Custom React Class/Component name
+let CommentBox = React.createClass({
+  render(){
+    return (
+      &lt;div className="commentBox">
+        Hello, world! I am a CommentBox.
+      &lt;/div>
+    );
+  }
+});
+                    </pre>
+                </dd>
+                <dt>
+                    <h4>Using props</h4>
+                </dt>
+                <dd>
+                    <pre data-lang="jsx">
+// Use
+&lt;Comment author="Pete Hunt">This is my first comment&lt;/Comment>
+// Access
+this.props.author
+this.props.children
+                    </pre>
+                </dd>
+                <dt>
+                    <h4>Set innerHTML</h4>
+                </dt>
+                <dd>
+                    <a href="https://facebook.github.io/react/tips/dangerously-set-inner-html.html">Dangerously set inner html</a>
+                    <p>You can use lodash to encode or decode <a href="http://www.w3schools.com/html/html_entities.asp">HTML Entity</a>. <a href="https://lodash.com/docs#escape"><code>_.escape</code></a><a href="https://lodash.com/docs#unescape"><code>_.unescape</code></a></p>
+                    <pre data-lang="jsx">
+// Get inner html
+function getInnerHTML(){
+  return {__html: "&lt;h1>Inner HTML&lt;/h1>"}
+}
+// Use
+&lt;div dangerouslySetInnerHTML={getInnerHTML()}>&lt;/div>
+                    </pre>
+                </dd>
+            </dl>
+            <p>
+                <a target="_blank" class="btn btn-default" href="./official-tutorial/index.html" role="button">Live Demo &raquo;</a>
+            </p>
         </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+
     </div>
 
     <hr>
 
     <footer>
-        <p>&copy; 2016 <a href="http://shaoke.me">Shaoke.me</a></p>
+        <p>&copy; 2016 <a target="_blank" href="http://shaoke.me">Shaoke.me</a></p>
     </footer>
 </div> <!-- /container -->
 
 <!-- jQuery first, then Bootstrap JS. -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
-        integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
-        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/addon/runmode/runmode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/addon/runmode/colorize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/jsx/jsx.min.js"></script>
+<script>
+    setTimeout(function () {
+        CodeMirror.colorize();
+    }, 500);
+</script>
 </body>
 </html>
