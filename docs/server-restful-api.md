@@ -16,8 +16,11 @@ None
 [
   {
     "_id": "s232ss33",
-    "author":"Shaoke Xu",
-    "text": "China is great!",
+    "name":"Shaoke Xu",
+    "comment": "China is great!",
+    "title": "Hello world",
+    "email": "",
+    "website":"",
     "created":"",
     "updated":""
   }
@@ -36,8 +39,11 @@ Create a comment
 
 ```
 {
-    "author":"Shaoke Xu",
-    "text": "China is great!"
+    "name":"Shaoke Xu",
+    "comment": "China is great!",
+    "title": "Hello world",
+    "email": "",
+    "website":""
 }
 ```
 ### Response
@@ -64,8 +70,11 @@ comment id
 ```
 {
     "_id": "s232ss33",
-    "author":"Shaoke Xu",
-    "text": "China is great!",
+    "name":"Shaoke Xu",
+    "comment": "China is great!",
+    "title": "Hello world",
+    "email": "",
+    "website":"",
     "created":"",
     "updated":""
 }
@@ -83,8 +92,11 @@ Update a comment
 
 ```
 {
-    "author":"Shaoke Xu",
-    "text": "China is great!"
+    "name":"Shaoke Xu",
+    "comment": "China is great!",
+    "title": "Hello world",
+    "email": "",
+    "website":""
 }
 ```
 
